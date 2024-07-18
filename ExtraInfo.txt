@@ -1,0 +1,39 @@
+
+Source: https://youtu.be/6z6CR29gtds?si=dIlka0dBBeLJJ9mm
+
+
+Commands: 
+    npm i nodemon -D // Creates key devDependencies in package.json , used in only devlopment Enviroment.
+
+
+
+"scripts": {
+    "start": "node index.js",     Don't want to restart Server in Production world 
+    "dev": "nodemon index"      
+  },
+
+
+
+Changes While Deploying App in cloud or server.
+
+
+    Enviroment Variables: Dynamic Variables
+
+        console.log("my name is ", process.env.myname)
+
+        Our Cloud Provider give variable name PORT 
+
+        process.env.PORT
+        process.env.MONGO_URL
+
+    make-sure have a start script in scripts package.json.
+    index.js -> app.js
+
+    In Package.json
+    main -> app.js
+    node -> app.js
+
+    make .env file in local and put all the variable that you gonna use
+
+    npm i dotenv
+    require dotenv package and put it on top in app.js
